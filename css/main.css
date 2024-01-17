@@ -82,7 +82,7 @@ body {
   align-items: center;
   min-height: 100vh;
   font-family: "Space Mono", monospace;
-  background-color: orange;
+  background-color: hsl(185, 41%, 84%);
 }
 
 .img-wrapper {
