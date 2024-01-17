@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="main">
+        <div class="img-wrapper">
+            <img src="./img/logo.svg" class="heading-img">
+        </div>
+        <div class="card">
+            <div class="bill-wrapper">
+                <div class="text-bill">
+                    <label for="bill-amount" class="label-bill">Bill</label>
+                    <p class="error-bill">Can't be zero</p>
+                </div>
+                <input type="text" name="bill-amount" class="bill-amount" id="bill-amount">
+                <p class="select-tip">Select Tip %</p>
+                <div class="tip-btn-wrapper">
+                    <button class="tip-btn">5%</button>
+                    <button class="tip-btn">10%</button>
+                    <button class="tip-btn">15%</button>
+                    <button class="tip-btn">25%</button>
+                    <button class="tip-btn">50%</button>
+                    <input type="text" class="custom" id="custom" placeholder="Custom" >
+                </div>
+                <div class="text-bill-second">
+                    <label for="people-amount" class="label-people">Number of People</label>
+                    <p class="error-people">Can't be zero</p>
+                </div>
+                <input type="text" name="people-amount" class="people-amount" id="people-amount">
+            </div>
+            <div class="total-wrapper">
+                <div class="total-content">
+                    <div class="desc">
+                        <p class="desc__first-heading">Tip Amount</p>
+                        <p class="desc__total-person">/ person</p>
+                    </div>
+                    <div class="cost">
+                        <p class="cost__first-cost">$0.00</p>
+                    </div>
+                </div>
+                <div class="total-content">
+                    <div class="desc">
+                        <p class="desc__total-heading">Total</p>
+                        <p class="desc__total-person">/ person</p>
+                    </div>
+                    <div class="cost">
+                        <p class="cost__total">$0.00</p>
+                    </div>
+                </div>
+                <button class="reset">Reset</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,276 @@
+@import './math';
+@import './variables';
+@import './reset';
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: $Font-style;
+	background-color: $Light-grayish-cyan;
+}
+
+.img-wrapper {
+	margin: rem(50) rem(0) rem(35) rem(0);
+	text-align: center;
+}
+
+.card {
+	padding-bottom: rem(20);
+	max-width: 100vw;
+	background-color: $White;
+	border-radius: rem(20);
+}
+
+.bill-wrapper {
+	padding-top: rem(30);
+	margin: rem(0) rem(32);
+}
+
+.bill-amount,
+.people-amount {
+	margin-bottom: rem(28);
+	padding: rem(10) rem(0);
+	width: 100%;
+	text-align: right;
+	font-family: $Font-style;
+	font-size: rem(24);
+	background-repeat: no-repeat;
+	background-position: 6%, center;
+	background-color: $Very-light-grayish-cyan;
+	border: none;
+	border-radius: rem(10);
+	color: $Very-dark-cyan;
+}
+
+.bill-amount {
+	background-image: url('../img/icon-dollar.svg');
+}
+
+.people-amount {
+	background-image: url('../img/icon-person.svg');
+}
+
+.label-bill,
+.label-people,
+.select-tip {
+	margin-bottom: rem(3);
+	color: $Dark-grayish-cyan;
+}
+
+.tip-btn-wrapper {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	column-gap: rem(17);
+	row-gap: rem(4);
+}
+
+.tip-btn {
+	margin-top: rem(12);
+	padding: rem(6) rem(0);
+	border-radius: rem(8);
+	font-size: rem(24);
+	font-family: $Font-style;
+	border: none;
+	background-color: $Very-dark-cyan;
+	color: $White;
+	cursor: pointer;
+}
+
+.tip-btn:focus {
+	background-color: $Strong-cyan;
+	color: $Very-dark-cyan;
+}
+
+.text-bill,
+.text-bill-second {
+	display: flex;
+	justify-content: space-between;
+}
+
+.text-bill-second {
+	margin-top: rem(32);
+}
+
+.custom {
+	padding: rem(12) rem(20) rem(0) rem(0);
+	font-size: rem(24);
+	text-align: right;
+	font-family: $Font-style;
+	border-radius: rem(8);
+	border: none;
+	background-color: $Very-light-grayish-cyan;
+}
+
+.error-bill,
+.error-people {
+	display: none;
+	color: $Error-color;
+}
+
+.total-wrapper {
+	margin: rem(0) rem(25);
+	display: flex;
+	flex-direction: column;
+	background-color: $Very-dark-cyan;
+	border-radius: rem(12);
+}
+
+.total-content {
+	margin: rem(0) rem(21);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.desc {
+	&__total-heading,
+	&__first-heading {
+		margin-top: rem(18);
+		color: $White;
+	}
+
+	&__first-heading {
+		margin-top: rem(40);
+	}
+	&__total-heading {
+		margin-top: rem(20);
+	}
+
+	&__total-person {
+		font-size: rem(13);
+		color: $Grayish-cyan;
+	}
+}
+
+.cost {
+	&__total,
+	&__first-cost {
+		margin-top: rem(20);
+		font-size: rem(32);
+		color: $Strong-cyan;
+	}
+
+	&__first-cost {
+		padding-top: rem(15);
+	}
+}
+
+.reset {
+	margin: rem(32) rem(21) rem(25) rem(21);
+	padding: rem(10) rem(0);
+	font-size: rem(20);
+	border: none;
+	border-radius: rem(6);
+	background-color: $Strong-cyan;
+	font-family: $Font-style;
+	color: $Very-dark-cyan;
+	text-transform: uppercase;
+	transition: background-color cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s;
+	cursor: pointer;
+}
+
+.reset:hover {
+	background-color: $Light-grayish-cyan;
+}
+
+@media (min-width: $screen-md) {
+	.card {
+		margin-bottom: rem(30);
+	}
+}
+
+@media (min-width: $screen-xxl) {
+	.main {
+		max-width: rem(920);
+	}
+	.card {
+        display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		padding-bottom: rem(7);
+        border-radius: rem(22);
+	}
+
+	.img-wrapper {
+		margin: rem(130) rem(0) rem(80) rem(0);
+	}
+
+	.bill-wrapper {
+		margin: rem(15) rem(32) rem(0) rem(47);
+	}
+
+	.bill-amount,
+	.people-amount {
+		margin-bottom: rem(40);
+		padding: rem(7) rem(0);
+		font-size: rem(24);
+		background-position: 5%, center;
+	}
+
+	.label-bill,
+	.label-people,
+	.select-tip {
+		margin-bottom: rem(5);
+	}
+
+	.tip-btn-wrapper {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		column-gap: rem(12);
+		row-gap: rem(7);
+	}
+
+	.tip-btn {
+		margin-top: rem(10);
+		padding: rem(6) rem(0);
+	}
+
+	.text-bill-second {
+		margin-top: rem(40);
+	}
+
+	.custom {
+		padding: rem(10) rem(15) rem(0) rem(0);
+
+	}
+
+	.total-wrapper {
+		margin: rem(32) rem(32) rem(25) rem(15);
+	}
+
+	.total-content {
+		margin: rem(0) rem(40);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.desc {
+		&__first-heading {
+			margin-top: rem(48);
+		}
+		&__total-heading {
+			margin-top: rem(35);
+		}
+	}
+
+	.cost {
+		&__total,
+		&__first-cost {
+			font-size: rem(47);
+		}
+
+		&__first-cost {
+			margin-top: rem(25);
+		}
+
+        &__total{
+            margin-top: rem(26);
+        }
+	}
+
+	.reset {
+		margin: rem(125) rem(40) rem(0) rem(40);
+		padding: rem(9) rem(0);
+	}
+}
