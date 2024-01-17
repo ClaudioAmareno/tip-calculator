@@ -82,7 +82,7 @@ body {
   align-items: center;
   min-height: 100vh;
   font-family: "Space Mono", monospace;
-  background-color: hsl(185, 41%, 84%);
+  background-color: orange;
 }
 
 .img-wrapper {
@@ -257,7 +257,7 @@ body {
     border-radius: 1.375rem;
   }
   .img-wrapper {
-    margin: 8.125rem 0rem 5rem 0rem;
+    margin: 2.1875rem 0rem 5rem 0rem;
   }
   .bill-wrapper {
     margin: 0.9375rem 2rem 0rem 2.9375rem;

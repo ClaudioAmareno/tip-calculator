@@ -8,7 +8,8 @@ body {
 	align-items: center;
 	min-height: 100vh;
 	font-family: $Font-style;
-	background-color: $Light-grayish-cyan;
+	// background-color: $Light-grayish-cyan;
+	background-color: orange;
 }
 
 .img-wrapper {
@@ -193,7 +194,7 @@ body {
 	}
 
 	.img-wrapper {
-		margin: rem(130) rem(0) rem(80) rem(0);
+		margin: rem(35) rem(0) rem(80) rem(0);
 	}
 
 	.bill-wrapper {
