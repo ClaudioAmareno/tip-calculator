@@ -28,17 +28,17 @@ const checkBillError = () => {
 }
 
 const countBill = () => {
-	let price = parseInt(billInput.value)
-	let people = parseInt(peopleInput.value)
-	const tip = parseFloat((customInput.value / 100) * billInput.value)
+	const price = billInput.valueAsNumber
+	const people = peopleInput.valueAsNumber
+	const tip = (customInput.value / 100) * billInput.value
 
-	const sum = ((price + tip) / people).toFixed(2)
+	if ((billInput.value !== '') && (peopleInput.value !== '') && (peopleInput.value > 0)) {
+		const sum = ((price + tip) / people).toFixed(2)
 
-	const tipSum = (tip / people).toFixed(2)
+		const tipSum = (tip / people).toFixed(2)
 
-	if ((billInput.value !== '') & (billInput.value > 0) & ((peopleInput.value !== '') & (peopleInput.value > 0))) {
-		totalCost.textContent = `$` + sum
-		tipCost.textContent = `$` + tipSum
+		totalCost.textContent = `$` + `${sum}`
+		tipCost.textContent = `$` + `${tipSum}`
 		peopleError.style.display = 'none'
 		billError.style.display = 'none'
 	} else {
@@ -46,25 +46,24 @@ const countBill = () => {
 	}
 }
 
-
 buttons.forEach(button => {
 	button.addEventListener('click', e => {
-		let tipValue = parseInt(e.target.innerText)
+		const tipValue = parseInt(e.target.data)
 
-		let price = parseInt(billInput.value)
-		let people = parseInt(peopleInput.value)
+		const price = billInput.valueAsNumber
+		const people = peopleInput.valueAsNumber
 
-		let valuesBtn = parseFloat((tipValue / 100) * billInput.value)
+		const valuesBtn = (tipValue / 100) * billInput.value
 
-		const sum = ((price + valuesBtn) / people).toFixed(2)
+		if ((billInput.value !== '') && (peopleInput.value !== '') && (peopleInput.value > 0)) {
+			const sum = ((price + valuesBtn) / people).toFixed(2)
 
-		const tipSum = (valuesBtn / people).toFixed(2)
-
-		if ((billInput.value !== '') & (billInput.value > 0) & ((peopleInput.value !== '') & (peopleInput.value > 0))) {
-			totalCost.textContent = `$` + sum
-			tipCost.textContent = `$` + tipSum
+			const tipSum = (valuesBtn / people).toFixed(2)
+			totalCost.textContent = `$` + `${sum}`
+			tipCost.textContent = `$` + `${tipSum}`
 			peopleError.style.display = 'none'
 			billError.style.display = 'none'
+			customInput.value = ''
 		} else {
 			checkBillError()
 		}
